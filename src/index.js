@@ -143,7 +143,6 @@ server.post('/logged', async function (req, res) {
 	    }
     }
     `;
-    console.log(req.body, "LOGGED ROUTE");
     const variables = {id: req.body.id};
 
     await fetch('http://localhost:4466', {
@@ -166,7 +165,6 @@ server.post('/logged', async function (req, res) {
             }
         })
         .catch((e) => {
-            console.log(e);
             res.status(400).send(e)
         });
 });
